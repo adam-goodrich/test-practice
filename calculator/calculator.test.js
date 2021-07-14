@@ -1,5 +1,9 @@
 const Calculator = require("./calculator");
 
+test("Not enetering parameters gives error message", () => {
+  expect(() => new Calculator.add()).toThrow(Error);
+});
+
 test("Add function is defined", () => {
   expect(Calculator.add(1, 2)).toBeDefined();
 });
