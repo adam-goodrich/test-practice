@@ -1,4 +1,10 @@
 const caesar = (string, num) => {
+  if (typeof string != "string") {
+    return "Must enter a string";
+  }
+  if (typeof num != "number") {
+    return "Must enter a number as second parameter";
+  }
   let result = [];
   let stringArray = string.split("");
   let newAsciiNum;

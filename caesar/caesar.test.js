@@ -5,7 +5,21 @@ test("function is defined", () => {
 });
 
 test("works with blank string", () => {
-  expect(caesar("")).toBe("");
+  expect(caesar("", 3)).toBe("");
+});
+
+test("works with blank string no numbers", () => {
+  expect(caesar("")).toBe("Must enter a number as second parameter");
+});
+
+test("works with blank string and nan as second parameter", () => {
+  expect(caesar("hello", false)).toBe(
+    "Must enter a number as second parameter"
+  );
+});
+
+test("no string gives warning", () => {
+  expect(caesar()).toBe("Must enter a string");
 });
 
 test("Works with low number", () => {
